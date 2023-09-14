@@ -1,0 +1,54 @@
+
+.contenedorProductos {
+    @include grid(3, 2, 3.125rem, space-evenly);
+    margin-top: 1.875rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.productos {
+    @include flex(row, wrap, space-between, center);
+    align-self: center;
+    justify-self: center;
+    width: 18.75rem;
+
+    a {
+        background-color: $colorTerciario;
+        overflow: hidden;
+        text-decoration: none;
+        color: $colorTexto;
+
+        &:hover {
+            color: $colorPrincipal;
+            transform: scale(1.1);
+        }
+    }
+
+    img {
+        width: 18.75rem;
+        height: 18.75rem;
+        border-width: 0.125rem;
+        border-style: solid;
+        border-color: $colorTextoContacto;
+        overflow: hidden;
+    }
+    h3{
+        font-size: 1.25rem;
+    
+    }
+
+    p {
+        font-size: 1.125rem;
+        margin: 0.3125rem;
+    }
+}
+
+.productos.exLibris a,
+.productos.sellosSeco a,
+.productos.lacre a {
+    background-color: $colorPrincipal;
+
+    &:hover {
+        color: $colorTerciario;
+    }
+}

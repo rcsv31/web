@@ -1,0 +1,40 @@
+footer{
+    @include flex(row, wrap, space-between, center);
+    padding: 1.25rem;
+    margin-top: 3.125rem;
+    background-color: $colorPrincipal;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.125rem;
+    text-align: center;
+    color: $colorTexto;
+}
+
+.redesSociales{
+    text-align: center;
+    a{
+        img {
+                width: 3.125rem;
+                height: 3.125rem;
+                margin: .625rem;
+                &:hover{
+                    filter: invert(48%) sepia(65%) saturate(7214%) hue-rotate(323deg) brightness(100%) contrast(105%);
+                    cursor: pointer;
+                }
+            }
+        }
+}
+
+.envioGratis{
+    img {
+            width: 3.125rem;
+            height: 3.125rem;
+            margin: .625rem;
+            &:hover{
+                filter: invert(48%) sepia(65%) saturate(7214%) hue-rotate(323deg) brightness(100%) contrast(105%);
+                cursor: pointer;
+            }
+        }
+    p{
+        margin-bottom: .625rem;
+    }
+    }

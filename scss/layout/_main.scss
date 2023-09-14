@@ -1,0 +1,11 @@
+.sectionIndexMasVendidos h2 {
+    text-align: center;
+    margin: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5625rem;
+    color: #FF2C6E;
+}
+
+.productosMasVendidos {
+@extend .productos;
+}

@@ -1,0 +1,27 @@
+.sectionBannerTrodat {
+    background-image: url(../assets/img/banner-trodat.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 10rem;
+    @include flex(column, wrap, center, center);
+    h2{
+        font-family: 'Poppins', sans-serif;
+        color: $colorTerciario;
+        font-size: 0;
+        background-color: #ffffffb6;
+        width: 100%;
+        text-align: center;
+        animation: aumentar 1s ease-in-out forwards
+    }
+    @keyframes aumentar{
+        0%{
+            font-size: 0;
+            background-color: #ffffffb6;
+        }
+        100%{
+            font-size: 1.5625rem;
+            background-color: #ffffffb6;
+        }
+    }
+}

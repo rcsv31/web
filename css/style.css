@@ -1,0 +1,399 @@
+@charset "UTF-8";
+/*Reincio navegador*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*fuente*/
+header {
+  background-color: #631E6B;
+}
+
+.bannerTuSello {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1.25rem 1.25rem;
+  background-color: #C93E74;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5625rem;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.subrayado {
+  display: inline-block;
+  position: relative;
+}
+.subrayado::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.25rem;
+  bottom: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.6s ease-out;
+}
+.subrayado:hover::after {
+  transform: scaleX(1);
+}
+
+.experiencia {
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+.experiencia img {
+  max-height: 5rem;
+}
+
+.envios {
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+.envios img {
+  margin-bottom: 0.625rem;
+}
+
+.sectionBannerTrodat {
+  background-image: url(../assets/img/banner-trodat.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.sectionBannerTrodat h2 {
+  font-family: "Poppins", sans-serif;
+  color: #FF2C6E;
+  font-size: 0;
+  background-color: rgba(255, 255, 255, 0.7137254902);
+  width: 100%;
+  text-align: center;
+  animation: aumentar 1s ease-in-out forwards;
+}
+@keyframes aumentar {
+  0% {
+    font-size: 0;
+    background-color: rgba(255, 255, 255, 0.7137254902);
+  }
+  100% {
+    font-size: 1.5625rem;
+    background-color: rgba(255, 255, 255, 0.7137254902);
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1.25rem;
+  margin-top: 3.125rem;
+  background-color: #631E6B;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.125rem;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.redesSociales {
+  text-align: center;
+}
+.redesSociales a img {
+  width: 3.125rem;
+  height: 3.125rem;
+  margin: 0.625rem;
+}
+.redesSociales a img:hover {
+  filter: invert(48%) sepia(65%) saturate(7214%) hue-rotate(323deg) brightness(100%) contrast(105%);
+  cursor: pointer;
+}
+
+.envioGratis img {
+  width: 3.125rem;
+  height: 3.125rem;
+  margin: 0.625rem;
+}
+.envioGratis img:hover {
+  filter: invert(48%) sepia(65%) saturate(7214%) hue-rotate(323deg) brightness(100%) contrast(105%);
+  cursor: pointer;
+}
+.envioGratis p {
+  margin-bottom: 0.625rem;
+}
+
+.contenedorProductos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 3.125rem;
+  margin-top: 1.875rem;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.productos, .productosMasVendidos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-self: center;
+  justify-self: center;
+  width: 18.75rem;
+}
+.productos a, .productosMasVendidos a {
+  background-color: #FF2C6E;
+  overflow: hidden;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.productos a:hover, .productosMasVendidos a:hover {
+  color: #631E6B;
+  transform: scale(1.1);
+}
+.productos img, .productosMasVendidos img {
+  width: 18.75rem;
+  height: 18.75rem;
+  border-width: 0.125rem;
+  border-style: solid;
+  border-color: #505050;
+  overflow: hidden;
+}
+.productos h3, .productosMasVendidos h3 {
+  font-size: 1.25rem;
+}
+.productos p, .productosMasVendidos p {
+  font-size: 1.125rem;
+  margin: 0.3125rem;
+}
+
+.productos.exLibris a, .exLibris.productosMasVendidos a,
+.productos.sellosSeco a,
+.sellosSeco.productosMasVendidos a,
+.productos.lacre a,
+.lacre.productosMasVendidos a {
+  background-color: #631E6B;
+}
+.productos.exLibris a:hover, .exLibris.productosMasVendidos a:hover,
+.productos.sellosSeco a:hover,
+.sellosSeco.productosMasVendidos a:hover,
+.productos.lacre a:hover,
+.lacre.productosMasVendidos a:hover {
+  color: #FF2C6E;
+}
+
+.contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.contacto .datosContacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.contacto .datosContacto form input[type=text] {
+  width: 80%;
+  padding: 0.625rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3125rem;
+  font-size: 1rem;
+}
+.contacto .datosContacto form button {
+  width: 50%;
+  padding: 0.625rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3125rem;
+  font-size: 16px;
+  background-color: #FF2C6E;
+  color: #fff;
+  cursor: pointer;
+}
+.contacto .datosContacto form textarea[id=mensaje] {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: vertical;
+  min-height: 300px;
+  /* Establecer una altura mínima inicial */
+}
+
+.sectionIndexMasVendidos h2 {
+  text-align: center;
+  margin: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5625rem;
+  color: #FF2C6E;
+}
+
+.formasContacto {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 6.25rem;
+  padding: 1.25rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.informacionContacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1.25rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.logoSugerencia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.logoSugerencia img {
+  width: 6.25rem;
+}
+.logoSugerencia p {
+  margin: 0;
+  line-height: 1.5;
+  max-height: 7.5em;
+}
+
+.emailContacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+
+.telefonoContacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    width: 100%;
+  }
+  .bannerTuSello {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .contenedorProductos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 3.125rem;
+    font-size: 1rem;
+  }
+  .productos, .productosMasVendidos {
+    width: 18.75rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    width: 100%;
+  }
+  .bannerTuSello {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .contenedorProductos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 3.125rem;
+    font-size: 1rem;
+  }
+  .productos, .productosMasVendidos {
+    width: 18.75rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  header {
+    width: 100%;
+  }
+  .bannerTuSello {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .contenedorProductos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 3.125rem;
+    font-size: 1rem;
+  }
+  .productos, .productosMasVendidos {
+    width: 18.75rem;
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1.25rem;
+    margin-top: 3.125rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  .redesSociales {
+    text-align: center;
+  }
+  .redesSociales a img {
+    width: 3.125rem;
+    height: 3.125rem;
+    margin: 0.625rem;
+  }
+  .redesSociales a img:hover {
+    filter: invert(48%) sepia(65%) saturate(7214%) hue-rotate(323deg) brightness(100%) contrast(105%);
+    cursor: pointer;
+  }
+  .envioGratis {
+    text-align: center;
+  }
+  .envioGratis img {
+    width: 3.125rem;
+    height: 3.125rem;
+    margin: 0.625rem;
+  }
+  .envioGratis img:hover {
+    filter: invert(48%) sepia(65%) saturate(7214%) hue-rotate(323deg) brightness(100%) contrast(105%);
+    cursor: pointer;
+  }
+  .envioGratis p {
+    margin-bottom: 0.625rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

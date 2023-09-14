@@ -1,0 +1,33 @@
+.formasContacto{
+    @include grid(2,1, 6.25rem, space-between);
+    padding: 1.25rem;
+    font-family: 'Poppins',sans-serif;
+}
+
+.informacionContacto{
+    @include flex(column, wrap, center, center);
+    padding: 1.25rem;
+    font-family: 'Poppins',sans-serif;
+}
+
+.logoSugerencia{
+    @include flex(row, wrap, center, center);
+    img{
+        width: 6.25rem;
+    }
+    p{
+        margin: 0;
+        line-height: 1.5;
+        max-height: 7.5em;
+    }
+}
+
+.emailContacto {
+    @include flex (row, wrap, center, center);
+    gap: .625rem;
+    }
+
+.telefonoContacto {
+    @include flex (row, wrap, center, center);
+    gap: .625rem;
+}
