@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 465px) {
     header {
         width: 100%;
     }
@@ -8,12 +8,24 @@
     text-align: center;
     }
     .contenedorProductos {
-    @include grid(2, 3, 3.125rem, space-evenly);
+    @include grid(1, 6, 3.125rem, space-evenly);
     font-size: 1rem;
     }
     
-    .productos {
+    .productosMasVendidos {
     width: 18.75rem;
     } 
+
+    .productosExLibris {
+    width: 18.75rem;
+    } 
+
+    .productosLacre {
+    width: 18.75rem;
+    }
+
+    .productosSellosSeco {
+    width: 18.75rem;
+    }
     
 }

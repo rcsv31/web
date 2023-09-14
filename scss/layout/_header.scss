@@ -1,3 +1,23 @@
-header{
+
+header {
+    nav {
         background-color: $colorPrincipal;
+        width: 100%;
+
+        .navbar-brand {
+            img {
+                width: 3.125rem;
+            }
+        }
+
+        .nav-link {
+            color: $colorTexto;
+            font-size: 18px;
+            font-family: Poppins, sans-serif;
+
+            &:hover {
+                color: #FF2C6E;
+            }
+        }
     }
+}

@@ -8,8 +8,20 @@
 }
 
 /*fuente*/
-header {
+header nav {
   background-color: #631E6B;
+  width: 100%;
+}
+header nav .navbar-brand img {
+  width: 3.125rem;
+}
+header nav .nav-link {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-family: Poppins, sans-serif;
+}
+header nav .nav-link:hover {
+  color: #FF2C6E;
 }
 
 .bannerTuSello {
@@ -21,9 +33,11 @@ header {
   padding: 1.25rem 1.25rem;
   background-color: #C93E74;
   font-family: "Poppins", sans-serif;
-  font-size: 1.5625rem;
   color: #FFFFFF;
   text-align: center;
+}
+.bannerTuSello h1 {
+  font-size: 1.5625rem;
 }
 
 .subrayado {
@@ -135,6 +149,43 @@ footer {
   margin-bottom: 0.625rem;
 }
 
+.contenedorProductos .productosMasVendidos, .contenedorProductos .productosSellosSeco, .contenedorProductos .productosLacre, .contenedorProductos .productosExLibris {
+  justify-self: center;
+}
+.contenedorProductos .productosMasVendidos a, .contenedorProductos .productosSellosSeco a, .contenedorProductos .productosLacre a, .contenedorProductos .productosExLibris a {
+  font-family: "Poppins", sans-serif;
+  background-color: #FF2C6E;
+  overflow: hidden;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.contenedorProductos .productosMasVendidos a:hover, .contenedorProductos .productosSellosSeco a:hover, .contenedorProductos .productosLacre a:hover, .contenedorProductos .productosExLibris a:hover {
+  color: #631E6B;
+  transform: scale(1.1);
+}
+.contenedorProductos .productosMasVendidos a img, .contenedorProductos .productosSellosSeco a img, .contenedorProductos .productosLacre a img, .contenedorProductos .productosExLibris a img {
+  width: 18.75rem;
+  height: 18.75rem;
+  border-width: 0.125rem;
+  border-style: solid;
+  border-color: #505050;
+  overflow: hidden;
+}
+.contenedorProductos .productosMasVendidos a h3, .contenedorProductos .productosSellosSeco a h3, .contenedorProductos .productosLacre a h3, .contenedorProductos .productosExLibris a h3 {
+  font-size: 1.25rem;
+}
+.contenedorProductos .productosMasVendidos a p, .contenedorProductos .productosSellosSeco a p, .contenedorProductos .productosLacre a p, .contenedorProductos .productosExLibris a p {
+  font-size: 1.125rem;
+  margin: 0.3125rem;
+}
+
+.contenedorProductos .productosSellosSeco a, .contenedorProductos .productosLacre a, .contenedorProductos .productosExLibris a {
+  background-color: #631E6B;
+}
+.contenedorProductos .productosSellosSeco a:hover, .contenedorProductos .productosLacre a:hover, .contenedorProductos .productosExLibris a:hover {
+  color: #FF2C6E;
+}
+
 .contenedorProductos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -144,56 +195,40 @@ footer {
   font-family: "Poppins", sans-serif;
   text-align: center;
 }
-
-.productos, .productosMasVendidos {
+.contenedorProductos .productosMasVendidos {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  align-self: center;
-  justify-self: center;
-  width: 18.75rem;
 }
-.productos a, .productosMasVendidos a {
-  background-color: #FF2C6E;
-  overflow: hidden;
-  text-decoration: none;
-  color: #FFFFFF;
+.contenedorProductos .productosExLibris {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-.productos a:hover, .productosMasVendidos a:hover {
-  color: #631E6B;
-  transform: scale(1.1);
+.contenedorProductos .productosExLibris {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-.productos img, .productosMasVendidos img {
-  width: 18.75rem;
-  height: 18.75rem;
-  border-width: 0.125rem;
-  border-style: solid;
-  border-color: #505050;
-  overflow: hidden;
+.contenedorProductos .productosLacre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-.productos h3, .productosMasVendidos h3 {
-  font-size: 1.25rem;
-}
-.productos p, .productosMasVendidos p {
-  font-size: 1.125rem;
-  margin: 0.3125rem;
-}
-
-.productos.exLibris a, .exLibris.productosMasVendidos a,
-.productos.sellosSeco a,
-.sellosSeco.productosMasVendidos a,
-.productos.lacre a,
-.lacre.productosMasVendidos a {
-  background-color: #631E6B;
-}
-.productos.exLibris a:hover, .exLibris.productosMasVendidos a:hover,
-.productos.sellosSeco a:hover,
-.sellosSeco.productosMasVendidos a:hover,
-.productos.lacre a:hover,
-.lacre.productosMasVendidos a:hover {
-  color: #FF2C6E;
+.contenedorProductos .productosSellosSeco {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .contacto {
@@ -235,10 +270,10 @@ footer {
 }
 
 .sectionIndexMasVendidos h2 {
-  text-align: center;
-  margin: 1rem;
   font-family: "Poppins", sans-serif;
-  font-size: 1.5625rem;
+  font-size: 1.875rem;
+  margin: 1rem 0rem;
+  text-align: center;
   color: #FF2C6E;
 }
 
@@ -295,12 +330,12 @@ footer {
   gap: 0.625rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1100px) {
   header {
     width: 100%;
   }
   .bannerTuSello {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     text-align: center;
   }
@@ -311,31 +346,172 @@ footer {
     gap: 3.125rem;
     font-size: 1rem;
   }
-  .productos, .productosMasVendidos {
+  .productosMasVendidos {
+    width: 18.75rem;
+  }
+  .productosExLibris {
+    width: 18.75rem;
+  }
+  .productosLacre {
+    width: 18.75rem;
+  }
+  .productosSellosSeco {
     width: 18.75rem;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1100px) {
   header {
     width: 100%;
   }
   .bannerTuSello {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     text-align: center;
   }
+  .bannerTuSello h1 {
+    font-size: 1.5rem;
+  }
+  .experiencia p {
+    font-size: 0.875rem;
+    color: #FFFFFF;
+  }
+  .experiencia img {
+    max-height: 3.125rem;
+  }
+  .envios {
+    font-size: 1rem;
+    color: #FFFFFF;
+  }
+  .envios img {
+    max-height: 3.125rem;
+    margin-bottom: 0.3125rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  header {
+    width: 100%;
+  }
+  .bannerTuSello {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+  }
+  .bannerTuSello h1 {
+    font-size: 1.5rem;
+  }
   .contenedorProductos {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     gap: 3.125rem;
     font-size: 1rem;
   }
-  .productos, .productosMasVendidos {
+  .productosMasVendidos {
+    width: 18.75rem;
+  }
+  .productosExLibris {
+    width: 18.75rem;
+  }
+  .productosLacre {
+    width: 18.75rem;
+  }
+  .productosSellosSeco {
     width: 18.75rem;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 700px) {
+  header {
+    width: 100%;
+  }
+  .bannerTuSello {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+  }
+  .bannerTuSello h1 {
+    font-size: 1.25rem;
+  }
+  .experiencia p {
+    font-size: 0.875rem;
+  }
+  .envios p {
+    font-size: 0.875rem;
+  }
+  .contenedorProductos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 3.125rem;
+    font-size: 1rem;
+  }
+  .productosMasVendidos {
+    width: 18.75rem;
+  }
+  .productosExLibris {
+    width: 18.75rem;
+  }
+  .productosLacre {
+    width: 18.75rem;
+  }
+  .productosSellosSeco {
+    width: 18.75rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  header {
+    width: 100%;
+  }
+  .bannerTuSello {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+  }
+  .bannerTuSello h1 {
+    font-size: 1.125rem;
+  }
+  .experiencia p {
+    font-size: 0.75rem;
+  }
+  .envios p {
+    font-size: 0.75rem;
+  }
+  .sectionTrodat h2 {
+    animation: aumentar 1s ease-in-out forwards;
+  }
+  @keyframes aumentar {
+    0% {
+      font-size: 0;
+      background-color: rgba(255, 255, 255, 0.7137254902);
+    }
+    100% {
+      font-size: 1.25rem;
+      background-color: rgba(255, 255, 255, 0.7137254902);
+    }
+  }
+}
+@media screen and (max-width: 595px) {
+  .bannerTuSello {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 1rem;
+  }
+  .redesSociales {
+    text-align: center;
+  }
+  .redesSociales a img {
+    width: 3.125rem;
+    height: 3.125rem;
+    margin: 0.625rem;
+  }
+}
+@media screen and (max-width: 465px) {
   header {
     width: 100%;
   }
@@ -351,7 +527,39 @@ footer {
     gap: 3.125rem;
     font-size: 1rem;
   }
-  .productos, .productosMasVendidos {
+  .productosMasVendidos {
+    width: 18.75rem;
+  }
+  .productosExLibris {
+    width: 18.75rem;
+  }
+  .productosLacre {
+    width: 18.75rem;
+  }
+  .productosSellosSeco {
+    width: 18.75rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  header {
+    width: 100%;
+  }
+  .envios {
+    font-size: 0.75rem;
+  }
+  .bannerTuSello {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .contenedorProductos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 3.125rem;
+    font-size: 1rem;
+  }
+  .productos {
     width: 18.75rem;
   }
   footer {
@@ -362,37 +570,22 @@ footer {
     flex-wrap: wrap;
     padding: 1.25rem;
     margin-top: 3.125rem;
-    font-family: "Poppins", sans-serif;
-    font-size: 1rem;
-    text-align: center;
-    color: #FFFFFF;
   }
   .redesSociales {
     text-align: center;
   }
   .redesSociales a img {
-    width: 3.125rem;
-    height: 3.125rem;
+    width: 1.5625rem;
+    height: 1.5625rem;
     margin: 0.625rem;
-  }
-  .redesSociales a img:hover {
-    filter: invert(48%) sepia(65%) saturate(7214%) hue-rotate(323deg) brightness(100%) contrast(105%);
-    cursor: pointer;
-  }
-  .envioGratis {
-    text-align: center;
   }
   .envioGratis img {
-    width: 3.125rem;
-    height: 3.125rem;
+    width: 1.5625rem;
+    height: 1.5625rem;
     margin: 0.625rem;
   }
-  .envioGratis img:hover {
-    filter: invert(48%) sepia(65%) saturate(7214%) hue-rotate(323deg) brightness(100%) contrast(105%);
-    cursor: pointer;
-  }
   .envioGratis p {
-    margin-bottom: 0.625rem;
+    font-size: 0.75rem;
   }
 }
 

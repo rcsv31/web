@@ -8,9 +8,22 @@
     text-align: center;
 
     h1 {
-    font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 }
+
+.experiencia {
+    p{
+        font-size: .875rem;
+    }
+}
+
+.envios {
+    p{
+        font-size: .875rem;
+    }
+}
+
     
     .contenedorProductos {
         @include grid(1, 6, 3.125rem, space-evenly);

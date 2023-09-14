@@ -1,0 +1,35 @@
+@media screen and (max-width: 1100px) {
+    header {
+        width: 100%;
+    }
+
+    .bannerTuSello {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+            h1{
+                font-size: 1.5rem;
+            }
+    }
+
+        .experiencia {
+            p{
+                font-size: .875rem;
+                color: $colorTexto;
+            }
+    
+            img {
+                max-height: 3.125rem;
+            }
+        }
+    
+        .envios {
+            font-size: 1rem;
+            color: $colorTexto;
+    
+            img {
+                max-height: 3.125rem;
+                margin-bottom: .3125rem;
+            }
+        }
+}

@@ -3,9 +3,11 @@
     padding: 1.25rem 1.25rem;
     background-color: $colorSecundario;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5625rem;
     color: $colorTexto;
     text-align: center;
+    h1{
+        font-size: 1.5625rem;
+    }
 }
 
 .subrayado {

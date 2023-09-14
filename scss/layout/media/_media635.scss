@@ -1,0 +1,42 @@
+@media screen and (max-width: 700px) {
+    header {
+        width: 100%;
+    }
+    .bannerTuSello {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+        font-size: 1.125rem;
+    }
+}
+
+.experiencia {
+    p{
+        font-size: .75rem;
+    }
+}
+
+.envios {
+    p{
+        font-size: .75rem;
+    }
+}
+.sectionTrodat {
+    h2{
+        animation: aumentar 1s ease-in-out forwards
+    }
+}
+        @keyframes aumentar {
+            0% {
+                font-size: 0;
+                background-color: #ffffffb6;
+            }
+    
+            100% {
+                font-size: 1.25rem;
+                background-color: #ffffffb6;
+            }
+        }
+    }

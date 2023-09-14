@@ -1,18 +1,6 @@
-
-.contenedorProductos {
-    @include grid(3, 2, 3.125rem, space-evenly);
-    margin-top: 1.875rem;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-}
-
-.productos {
-    @include flex(row, wrap, space-between, center);
-    align-self: center;
-    justify-self: center;
-    width: 18.75rem;
-
+%estiloProductosMasVendidos {
     a {
+        font-family: 'Poppins', sans-serif;
         background-color: $colorTerciario;
         overflow: hidden;
         text-decoration: none;
@@ -22,33 +10,66 @@
             color: $colorPrincipal;
             transform: scale(1.1);
         }
-    }
+        img {
+            width: 18.75rem;
+            height: 18.75rem;
+            border-width: 0.125rem;
+            border-style: solid;
+            border-color: $colorTextoContacto;
+            overflow: hidden;
+        }
 
-    img {
-        width: 18.75rem;
-        height: 18.75rem;
-        border-width: 0.125rem;
-        border-style: solid;
-        border-color: $colorTextoContacto;
-        overflow: hidden;
-    }
-    h3{
-        font-size: 1.25rem;
-    
-    }
+        h3 {
+            font-size: 1.25rem;
+        }
 
-    p {
-        font-size: 1.125rem;
-        margin: 0.3125rem;
+        p {
+            font-size: 1.125rem;
+            margin: 0.3125rem;
+        }
+    }
+    justify-self: center;
+}
+
+%estiloProductos {
+    @extend %estiloProductosMasVendidos;
+
+    a {
+        background-color: $colorPrincipal;
+
+        &:hover {
+            color: $colorTerciario;
+        }
     }
 }
 
-.productos.exLibris a,
-.productos.sellosSeco a,
-.productos.lacre a {
-    background-color: $colorPrincipal;
+.contenedorProductos {
+    @include grid(3, 2, 3.125rem, space-evenly);
+    margin-top: 1.875rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
 
-    &:hover {
-        color: $colorTerciario;
+    .productosMasVendidos {
+        @extend %estiloProductosMasVendidos;
+        @include flex(row, wrap, space-between, center);
+    }
+
+    .productosExLibris {
+        @extend %estiloProductos;
+        @include flex(row, wrap, space-between, center);
+    }
+    .productosExLibris {
+        @extend %estiloProductos;
+        @include flex(row, wrap, space-between, center);
+        }
+    .productosLacre {
+        @extend %estiloProductos;
+        @include flex(row, wrap, space-between, center);
+    }
+
+    .productosSellosSeco {
+        @extend %estiloProductos;
+        @include flex(row, wrap, space-between, center);
     }
 }
+

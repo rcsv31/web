@@ -2,6 +2,11 @@
     header {
         width: 100%;
     }
+
+    .envios {
+            font-size: .75rem;
+        }
+
     .bannerTuSello {
     flex-direction: column;
     align-items: center;
@@ -20,10 +25,6 @@
     @include flex(column, wrap, center, center);
     padding: 1.25rem;
     margin-top: 3.125rem;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    text-align: center;
-    color: $colorTexto;
     }
     
     .redesSociales {
@@ -31,34 +32,22 @@
     
     a {
     img {
-        width: 3.125rem;
-        height: 3.125rem;
+        width: 1.5625rem;
+        height: 1.5625rem;
         margin: .625rem;
     
-        &:hover {
-        filter: invert(48%) sepia(65%) saturate(7214%) hue-rotate(323deg) brightness(100%) contrast(105%);
-        cursor: pointer;
-            }
-        }
     }
     }
-    
+    }
+
     .envioGratis {
-        text-align: center;
-    
-        img {
-            width: 3.125rem;
-            height: 3.125rem;
-            margin: .625rem;
-    
-                &:hover {
-                    filter: invert(48%) sepia(65%) saturate(7214%) hue-rotate(323deg) brightness(100%) contrast(105%);
-                    cursor: pointer;
-                }
-            }
-    
-            p {
-            margin-bottom: .625rem;
-            }
-        }
-        }
+    img {
+        width: 1.5625rem;
+        height: 1.5625rem;
+        margin: .625rem;
+    }
+    p{
+    font-size: .75rem;
+    }
+    }
+}
